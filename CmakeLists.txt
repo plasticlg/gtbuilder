@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 add_library(gt-builder builder.cxx)
 
-target_include_directories(gt-builder PUBLIC
-							"${PROJECT_SOURCE_DIR}"
+target_include_directories(gt-builder
+							INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}"
+							PUBLIC "${PROJECT_SOURCE_DIR}"
 							)
